@@ -6,10 +6,10 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <!-- css -->
-<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/swiper.3.1.2.min.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
+<link href="css/video-js.css" rel="stylesheet" type="text/css">
 <!-- end css -->
 <title>无标题文档</title>
 </head>
@@ -20,9 +20,15 @@
     	<div class="navbar-header">
           <span></span>
           <span></span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" 
+             data-target="#example-navbar-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button>
         </div>
-        <div>
-          <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+          <ul class="nav navbar-nav navbar-right ">
              <li><a href="/lianshu/index.php/Home/Index/index.html">首页</a></li>
               <li><a href="/lianshu/index.php/Home/Index/about.html">关于联塑</a></li>
               <li><a href="/lianshu/index.php/Home/Index/strength.html">集团实力</a></li>
@@ -69,7 +75,7 @@
                             <div class="col-md-4" style="background:#fff; height:100px"></div>
                             <div class="col-md-4" style="background:#000; height:100px"></div>
                         </div>
-                        <div class="col-md-6 pull-left">
+                        <div class="col-md- pull-left">
                         	<h2>11111</h2>
                             <p>2222222222222222222222222222222</p>
                             <p>2222222222222222222222222222222</p>
@@ -272,7 +278,15 @@
         </div>
         <div class="row" style="height:50%">
             <div class="col-md-4" style="background:#FFFFFF; height:100%">
-            
+            	<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none"  width="100%" height="100%"
+                  poster="images/video.jpg"
+                  data-setup="{}">
+                    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                    <track kind="captions" src="js/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                    <track kind="subtitles" src="js/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                </video>
             </div>
             <div class="col-md-4" style="background:#000; height:100%">
             
@@ -376,5 +390,6 @@
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/swiper.3.1.2.jquery.min.js"></script>
 <script src="js/jquery.mousewheel.js"></script>
+<script src="js/video.js"></script>
 <script src="js/index.js"></script>
 <!-- end js -->

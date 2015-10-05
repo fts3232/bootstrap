@@ -12,6 +12,9 @@ resize();
 win.resize(function(){
 	resize();
 });
+
+videojs.options.flash.swf = "video-js.swf";
+
 $(document).ready(function(){
 	$(document).on('click','#page-d .tab',function(){
 		i=$(this).index();
