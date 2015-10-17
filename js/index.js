@@ -49,6 +49,7 @@ $(document).ready(function(){
 			 }
 		 $('html,body').stop().animate({scrollTop: offset+'px'}, 800);
 	});
+	document.documentElement.style.overflow='hidden';
 	var mySwiper = new Swiper ('#page-c-swiper', {
 		loop: true,
 		
