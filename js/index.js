@@ -1,4 +1,4 @@
-var win=$(window),winH=win.height(),winW=win.width();
+﻿var win=$(window),winH=win.height(),winW=win.width();
 function resize(){
 	winW=win.width();
     winH=win.height();
@@ -12,10 +12,10 @@ resize();
 win.resize(function(){
 	resize();
 });
-
 videojs.options.flash.swf = "video-js.swf";
 
 $(document).ready(function(){
+	
 	$(document).on('click','#page-d .tab',function(){
 		i=$(this).index();
 		$('#panel div').eq(i).removeClass('hide').addClass('show').siblings().removeClass('show').addClass('hide')
@@ -52,17 +52,18 @@ $(document).ready(function(){
 	document.documentElement.style.overflow='hidden';
 	var mySwiper = new Swiper ('#page-c-swiper', {
 		loop: true,
-		
 		// 如果需要分页器
 		pagination: '.swiper-pagination'
 	  })   
 	var mySwiper2 = new Swiper ('#page-b-swiper', {
 		loop: true,
 		slidesPerView : 5,
+
 		spaceBetween:10
+		
 	  })        
 	var mySwiper3 = new Swiper('#page-a-swiper',{
-		loop: true,
-		pagination: '.swiper-pagination'
+
+
 	  })
 })
